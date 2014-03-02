@@ -49,20 +49,15 @@ namespace Laba1
             GL.Vertex3(0.0f, 1.0f, 4.0f);
             GL.Vertex3(1.0f, 1.0f, 4.0f);
             GL.Vertex3(1.0f, 0.0f, 4.0f);
-            GL.End();
 
+            GL.End();
+            int z = 1;
             GL.Begin(PrimitiveType.LineLoop);
-            GL.Vertex3(0.0f, 0.0f, 4.0f);
-            GL.Vertex3(0.1f, 1.0f, 4.0f);
-            GL.Vertex3(0.2f, 0.0f, 4.0f);
-            GL.Vertex3(0.3f, 1.0f, 4.0f);
-            GL.Vertex3(0.4f, 0.0f, 4.0f);
-            GL.Vertex3(0.5f, 1.0f, 4.0f);
-            GL.Vertex3(0.6f, 0.0f, 4.0f);
-            GL.Vertex3(0.7f, 1.0f, 4.0f);
-            GL.Vertex3(0.8f, 0.0f, 4.0f);
-            GL.Vertex3(0.9f, 1.0f, 4.0f);
-            GL.Vertex3(1.0f, 0.0f, 4.0f);
+            for (int i = 0; i <=10; i++)
+            {
+                z = z ^ 1;
+                GL.Vertex3(i/10f, z, 4.0f);
+            }
             GL.End();
 
             SwapBuffers();
