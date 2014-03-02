@@ -1,0 +1,14 @@
+﻿<Window x:Class="Laba1Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="MainWindow" Height="700" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <WindowsFormsHost Name="Host"/>
+        <Slider HorizontalAlignment="Left" Margin="48,75,0,0" Grid.Row="1" VerticalAlignment="Top" Width="269" Minimum="10" Maximum="100" Interval="3" SmallChange="2" ValueChanged="Slider_ValueChanged"/>
+    </Grid>
+</Window>
